@@ -181,7 +181,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       class="cta-area py-xl-5 py-lg-4 py-md-3 py-sm-2 space"
       data-overlay="title"
       data-opacity="8"
-      data-bg-src="<?= $basePath?>/assets/img/hero/hero_bg_3_2.jpg "
+      data-bg-src="<?= $basePath?>/assets/img/bg/y.jpg "
       
     >
       <div class="container">

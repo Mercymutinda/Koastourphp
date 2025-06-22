@@ -97,7 +97,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
       class="cta-area py-xl-5 py-lg-4 py-md-3 py-sm-2 space"
       data-overlay="title"
       data-opacity="8"
-      data-bg-src="<?= $basePath?>/assets/img/hero/hero_bg_3_2.jpg "
+      data-bg-src="<?= $basePath?>/assets/img/bg/y.jpg "
       
     >
       <div class="container">
@@ -105,7 +105,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
           <div class="col-lg-6 pe-xl-4 ps-xl-4 ">
             <div class="title-area mb-30 mt-n3 text-center">
               <h2 class="sec-title text-white text-capitalize">
-                get updated the latest news
+                support a youth today
               </h2>
             </div>
 

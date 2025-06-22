@@ -96,12 +96,12 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
     <div class="col-lg-3 gallery-box_wrapp">
       <div class="gallery-box">
         <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/8.jpg" class="popup-image">
+          <a href="<?= $basePath ?>assets/img/bg/new69.jpg" class="popup-image">
             <div class="icon-btn">
               <i class="fal fa-magnifying-glass-plus"></i>
             </div>
             <img
-              src="<?= $basePath ?>assets/img/bg/69.jpg"
+              src="<?= $basePath ?>assets/img/bg/new69.jpg"
               alt="gallery image" />
           </a>
         </div>
