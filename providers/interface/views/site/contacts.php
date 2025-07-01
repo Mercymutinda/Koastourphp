@@ -46,7 +46,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
                   <a href="tel:+12042911303">+1 204 291 1303</a>
                 </p>
                 <p class="about-contact-details-text">
-                  <a href="tel:+12042911303">+1 204 291 1303</a>
+                  <!-- <a href="tel:+12042911303">+1 204 291 1303</a> -->
                 </p>
               </div>
             </div>

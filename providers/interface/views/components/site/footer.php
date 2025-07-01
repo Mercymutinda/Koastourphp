@@ -18,8 +18,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                 <a href="home-travel.html"><img src="<?= $basePath ?>assets/img/bg/logov3.png" style="width:80px; height:80px;" alt="Koas" /></a>
               </div>
               <p class="about-text">
-                Rapidiously myocardinate cross-platform intellectual capital
-                model. Appropriately create interactive infrastructures
+               Kifaru Outdoor Adventures Society (KOAS) is a non-profit organization dedicated to providing outdoor experiences for youth.
               </p>
               <div class="th-social">
                 <!-- <a href="https://www.facebook.com/"
@@ -104,7 +103,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           <p class="copyright-text">
             <?= $_SERVER['APP_DEVELOPER'] ?>
           
-            Copyright 2025 <a href="">koas</a>. All Rights
+            Copyright 2025 <a href=""></a>. All Rights
             Reserved.
           </p>
         </div>

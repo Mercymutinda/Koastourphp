@@ -48,7 +48,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                       <p class="box-text">
                         “KOAS helped me discover who I really am. I never felt so connected to nature and to myself.”
                       </p>
-                      <h6 class="box-title">Sarah Rahman</h6>
+                      <h6 class="box-title">Sarah </h6>
                       <span class="box-desig">A KOAS youth participant</span>
                       <div class="box-review">
                         <i class="fa-solid fa-star"></i>
@@ -78,7 +78,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <div class="testi-grid2">
                     <div class="box-content">
                       <p class="box-text">
@@ -162,7 +162,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div
@@ -187,7 +187,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                     />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <div class="box-img">
                     <img
                       src="<?= $basePath ?>assets/img/testimonial/testi_4_3.png"
@@ -202,7 +202,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                       alt="Image"
                     />
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="icon-box">
                 <button

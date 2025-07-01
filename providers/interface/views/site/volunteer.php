@@ -90,8 +90,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
             Be a mentor
             </h2>
             <p class="sec-text2 mb-50">
-              Kifaru Outdoor Adventures exists to create opportunities for immigrant and underprivileged youth to develop holistically in their social, physical, and mental well-being while developing their leadership skills through participation in outdoor nature and nature-based activities. Our activities provide an environment that fosters community cohesion, breaks barriers of access to nature, and promote a love for nature and adventure.
-            </p>
+            Becoming a mentor with KOAS means guiding young people as they discover their strengths and overcome challenges. Your presence provides encouragement, support, and a sense of belonging. Share your journey, wisdom, and life experience to help a youth grow in confidence and purpose through meaningful outdoor adventures, leadership activities, and a strong, nurturing community.            </p>
 
           </div>
          
@@ -105,8 +104,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
             Join an event 
             </h2>
             <p class="sec-text2 mb-50">
-              Kifaru Outdoor Adventures exists to create opportunities for immigrant and underprivileged youth to develop holistically in their social, physical, and mental well-being while developing their leadership skills through participation in outdoor nature and nature-based activities. Our activities provide an environment that fosters community cohesion, breaks barriers of access to nature, and promote a love for nature and adventure.
-            </p>
+            Join a KOAS event and be part of something transformative. Whether it’s hiking, tree planting, kayaking, or cultural exchange, each activity connects youth to nature and each other. Your presence helps create inclusive outdoor experiences that promote wellness, leadership, and teamwork while building lifelong memories. No experience needed—just your energy and willingness to show up.            </p>
 
           </div>
          
@@ -120,8 +118,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
             Lend your skills to make a difference
             </h2>
             <p class="sec-text2 mb-50">
-              Kifaru Outdoor Adventures exists to create opportunities for immigrant and underprivileged youth to develop holistically in their social, physical, and mental well-being while developing their leadership skills through participation in outdoor nature and nature-based activities. Our activities provide an environment that fosters community cohesion, breaks barriers of access to nature, and promote a love for nature and adventure.
-            </p>
+            Use your unique skills to create impact! Whether you're a photographer, web designer, counselor, or cook, KOAS welcomes passionate individuals who want to help behind the scenes. Your contribution helps shape enriching programs and events for youth. Every skill shared—big or small—builds toward a stronger, empowered community rooted in adventure, connection, and purpose.            </p>
 
           </div>
          

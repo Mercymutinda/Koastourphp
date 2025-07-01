@@ -255,7 +255,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
 </section>
 
 <!-- sponsors -->
-<div class="brand-area overflow-hidden space-bottom">
+<!-- <div class="brand-area overflow-hidden space-bottom">
       <div class="container th-container">
         <h2 class=" sec-title"> A big Thanks to our Sponsors</h2>
         <div
@@ -435,7 +435,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 <!-- sign up newsletter -->
 
