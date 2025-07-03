@@ -5,8 +5,7 @@ use yii\helpers\Url;
 $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
 
 ?>
-<footer
-  class="footer-wrapper bg-title footer-layout2 footer-layout5 ">
+<footer class="footer-wrapper bg-title footer-layout2 footer-layout5 ">
 
   <div class="widget-area">
     <div class="container">
@@ -15,21 +14,26 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           <div class="widget footer-widget">
             <div class="th-widget-about">
               <div class="about-logo">
-                <a href="<?= Url::to(['site/index']) ?>"><img src="<?= $basePath ?>assets/img/bg/logov3.png" style="width:80px; height:80px;" alt="Koas" /></a>
+                <a href="<?= Url::to(['site/index']) ?>"><img src="<?= $basePath ?>assets/img/bg/logov3.png"
+                    style="width:80px; height:80px;" alt="Koas" /></a>
               </div>
               <p class="about-text">
-               Kifaru Outdoor Adventures Society (KOAS) is a non-profit organization dedicated to providing outdoor experiences for youth.
+                Kifaru Outdoor Adventures Society (KOAS) is a non-profit organization dedicated to providing outdoor
+                experiences for youth.
               </p>
               <div class="th-social">
                 <!-- <a href="https://www.facebook.com/"
                       ><i class="fab fa-facebook-f"></i
                     ></a> -->
-                <a href="https://youtube.com/@kifaruoutdooradventuressociety?si=CKaUfjLl-1jIggbP" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/kifaru-outdooradventures-19a62b362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@kifaruoutdooradventuressociety?si=CKaUfjLl-1jIggbP" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/kifaru-outdooradventures-19a62b362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <!-- <a href="https://www.whatsapp.com/"
                       ><i class="fab fa-twitter"></i
                     ></a> -->
-                <a href="https://www.instagram.com/kifaru_koas?igsh=MWF0ZDh1bnZqb2tzbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/kifaru_koas?igsh=MWF0ZDh1bnZqb2tzbQ==" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -70,13 +74,10 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                 </div>
                 <div class="details">
                   <p>
-                    <a
-                      href="mailto:info@kifaruoutdoors.ca"
-                      class="info-box_link">info@kifaruoutdoors.ca</a>
+                    <a href="mailto:info@kifaruoutdoors.ca" class="info-box_link">info@kifaruoutdoors.ca</a>
                   </p>
                   <p>
-                    <a
-                      href="kifaruoutdooradventures@hotmail.com"
+                    <a href="kifaruoutdooradventures@hotmail.com"
                       class="info-box_link">kifaruoutdooradventures@hotmail.com</a>
                   </p>
                 </div>
@@ -101,14 +102,18 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       <div class="row justify-content-between align-items-center">
         <div class="col-md-6">
           <p class="copyright-text">
-            Kifaru Outdoors 
-            <?= $_SERVER['APP_DEVELOPER'] ?>
-          
-            Copyright 2025 <a href=""></a>. All Rights
+            Kifaru Outdoors Adventures Society.
+            Copyright 2025 . All Rights
             Reserved.
           </p>
         </div>
-
+        <div class=" col-lg-3 col-md-6">
+          <div class="copyright-menu">
+          <p>
+            Developed by
+         <a class="text-primary" href="https://www.github.com"> <?= $_SERVER['APP_DEVELOPER'] ?></a>
+          </p>  
+          </div>
       </div>
     </div>
   </div>

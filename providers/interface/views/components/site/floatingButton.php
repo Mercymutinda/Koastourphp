@@ -13,7 +13,7 @@ use yii\helpers\Url;
 <style>
   .floating-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     transform: translateY(-50%);
     right: 30px;
     z-index: 9999;
