@@ -101,6 +101,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       <div class="row justify-content-between align-items-center">
         <div class="col-md-6">
           <p class="copyright-text">
+            Kifaru Outdoors 
             <?= $_SERVER['APP_DEVELOPER'] ?>
           
             Copyright 2025 <a href=""></a>. All Rights
