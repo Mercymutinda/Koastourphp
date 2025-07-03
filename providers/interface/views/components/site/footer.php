@@ -15,7 +15,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           <div class="widget footer-widget">
             <div class="th-widget-about">
               <div class="about-logo">
-                <a href="home-travel.html"><img src="<?= $basePath ?>assets/img/bg/logov3.png" style="width:80px; height:80px;" alt="Koas" /></a>
+                <a href="<?= Url::to(['site/index']) ?>"><img src="<?= $basePath ?>assets/img/bg/logov3.png" style="width:80px; height:80px;" alt="Koas" /></a>
               </div>
               <p class="about-text">
                Kifaru Outdoor Adventures Society (KOAS) is a non-profit organization dedicated to providing outdoor experiences for youth.
@@ -71,7 +71,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                 <div class="details">
                   <p>
                     <a
-                      href="mailto:koastours@gmail.com"
+                      href="mailto:info@kifaruoutdoors.ca"
                       class="info-box_link">info@kifaruoutdoors.ca</a>
                   </p>
                   <p>
