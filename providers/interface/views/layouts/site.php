@@ -42,3 +42,16 @@ SiteAsset::register($this);
 
 </html>
 <?php $this->endPage() ?>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let menuWrapper = document.querySelector('.th-menu-wrapper');
+
+    window.addEventListener('scroll', function () {
+      if (menuWrapper.classList.contains('th-body-visible')) {
+        menuWrapper.classList.remove('th-body-visible');
+      }
+    });
+  });
+</script>
