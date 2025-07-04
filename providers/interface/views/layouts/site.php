@@ -18,7 +18,7 @@ SiteAsset::register($this);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <?php $this->registerCsrfMetaTags() ?>
-    <title>KOAS</title>
+    <title>Kifaru Outdoor Adventures Society</title>
     <?php $this->head() ?>
 </head>
 
