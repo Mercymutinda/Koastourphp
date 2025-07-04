@@ -125,6 +125,15 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 $_ENV['APP_VERSION'] . '/about' => 'site/about',
+                '/' => 'site/index',
+                '/services' => 'site/services',
+                '/impact' => 'site/impact',
+                '/contact' => 'site/contact',
+                '/support' => 'site/support',
+                '/donate' => 'site/donate',
+                '/volunteer' => 'site/volunteer',
+                '/partner' => 'site/partner',
+
                 [
                     'pattern' => $_ENV['APP_VERSION'] . '/docs/openapi-json-resource',
                     'route' => 'site/json-docs',
