@@ -52,9 +52,16 @@ class BoardController extends DashboardController
         } else {
             $model->loadDefaultValues();
         }
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+        if ($this->request->isAjax) {
+      
+            return $this->renderAjax('create', [
+                'model' => $model,
+            ]);
+        }else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
     }
     public function actionUpdate($id)
     {
@@ -71,9 +78,15 @@ class BoardController extends DashboardController
                 }
             }
         }
-        return $this->render('update', [
-            'model' => $model,
-        ]);
+        if ($this->request->isAjax) {
+            return $this->renderAjax('update', [
+                'model' => $model,
+            ]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
     }
     public function actionTrash($id)
     {

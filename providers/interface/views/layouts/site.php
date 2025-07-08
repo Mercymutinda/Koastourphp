@@ -25,7 +25,7 @@ SiteAsset::register($this);
 <body>
 
     <?php $this->beginBody() ?>
-    <div class="cursor-follower"></div>
+    <!-- <div class="cursor-follower"></div> -->
     <div class="slider-drag-cursor">
         <i class="fas fa-angle-left me-2"></i> DRAG
         <i class="fas fa-angle-right ms-2"></i>

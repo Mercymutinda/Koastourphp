@@ -17,15 +17,7 @@ use helpers\widgets\ActiveForm;
         <div class="col-md-12">
           <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
         </div>
-        <div class="col-md-12">
-          <?= $form->field($model, 'is_deleted')->textInput() ?>
-        </div>
-        <div class="col-md-12">
-          <?= $form->field($model, 'created_at')->textInput() ?>
-        </div>
-        <div class="col-md-12">
-          <?= $form->field($model, 'updated_at')->textInput() ?>
-        </div>
+ 
     </div>
     <div class="block-content block-content-full text-center">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
