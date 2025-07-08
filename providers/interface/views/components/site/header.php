@@ -132,7 +132,7 @@ use yii\helpers\Url;
                   style="height:100px" /></a>
           
         </div>
-        <div class="th-mobile-menu">
+        <div class="th-mobile-menu" style="background-color: white !important; margin-top:0px !important;   height:100vh !important;">
           <ul>
           
           <li><a class="fw-bolder" href="<?= Url::to(['site/index']) ?>">Home</a></li>

@@ -1910,8 +1910,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   overflow-y: scroll;
   max-height: calc(100vh - 200px);
   padding-bottom: 40px;
-  margin-top: 33px;
+  /* margin-top: 33px; */
   text-align: left;
+  height:100vh;
 }
 
 .th-mobile-menu ul {
