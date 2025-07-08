@@ -1906,6 +1906,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   visibility: visible;
 }
 .th-mobile-menu {
+  background-color: #fff;
   overflow-y: scroll;
   max-height: calc(100vh - 200px);
   padding-bottom: 40px;
