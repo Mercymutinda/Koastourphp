@@ -3,7 +3,7 @@ require_once __DIR__ . '/wrapper.php';
 $userMenu = [
     ['title' => 'Dashboard', 'icon' => 'home', 'url' => 'home/index'],
     ['title' => 'Banners', 'icon' => 'book', 'url' => '/dashboard/banners/index'],
-    ['title' => 'services', 'icon' => 'list', 'url' => '/dashboard/banners/index'],
+    ['title' => 'services', 'icon' => 'list', 'url' => '/dashboard/services/index'],
     ['title' => 'testimonials', 'icon' => 'user', 'url' => '/dashboard/banners/index'],
     ['title' => 'Gallery', 'icon' => 'camera', 'url' => '/dashboard/gallery/index'],
     ['title' => 'Board', 'icon' => 'users', 'url' => '/dashboard/banners/index'],

@@ -37,6 +37,27 @@ class m250705_144036_cms extends Migration
             'updated_at' => $this->integer(),
         ]
         );
+        $this->createTable("testimonials", [
+            'id'=> $this->primaryKey(),
+            'name'=> $this->string(255)->notNull(),
+            'relation'=> $this->string(255)->notNull(),
+            'content'=> $this->text()->notNull(),
+            'image'=> $this->string(255),
+            'is_deleted' => $this->boolean()->defaultValue(false),
+            'created_at' => $this->integer(),
+            'updated_at' => $this->integer(),
+        ]
+        );
+        $this->createTable("board", [
+            'id'=> $this->primaryKey(),
+            'name'=> $this->string(255)->notNull(),
+            'position'=> $this->text()->notNull(),
+            'image'=> $this->string(255),
+            'is_deleted' => $this->boolean()->defaultValue(false),
+            'created_at' => $this->integer(),
+            'updated_at' => $this->integer(),
+        ]
+        );
         
 
 

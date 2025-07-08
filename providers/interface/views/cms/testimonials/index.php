@@ -1,18 +1,18 @@
 <?php
 
-use dashboard\models\Banners;
+use dashboard\models\Testimonials;
 use helpers\Html;
 use yii\helpers\Url;
 use helpers\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var dashboard\models\searches\BannersSearch $searchModel */
+/** @var dashboard\models\searches\TestimonialsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Banners';
+$this->title = 'Testimonials';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="banners-index row">
+<div class="testimonials-index row">
     <div class="col-md-12">
       <div class="block block-rounded">
         <div class="block-header block-header-default">
@@ -23,16 +23,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'url' => Url::to(['create']),
             'appearence' => [
               'type' => 'text',
-              'text' => 'Create Banners',
+              'text' => 'Create Testimonials',
               'theme' => 'primary',
-              'visible' => Yii::$app->user->can('dashboard-banners-create', true)
+              'visible' => Yii::$app->user->can('dashboard-testimonials-create', true)
             ],
-            'modal' => ['title' => 'New Banners']
+            'modal' => ['title' => 'New Testimonials']
           ]) ?>
           </div> 
         </div>
         <div class="block-content">     
-    <div class="banners-search my-3">
+    <div class="testimonials-search my-3">
     <?= $this->render('_search', ['model' => $searchModel]); ?>
     </div>
 
@@ -41,11 +41,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-     
-            'title',
-            'description:ntext',
+            // 'id',
+            'name',
+            'relation',
+            'content:ntext',
             'image',
-            // 'is_deleted',
+            //'is_deleted',
             //'created_at',
             //'updated_at',
             [
@@ -55,20 +56,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions' => ['style'=>'text-align: center;'],
                  'buttons' => [
                     'update' => function ($url, $model, $key) {
-                        return Html::customButton(['type' => 'modal', 'url' => Url::toRoute(['update', 'id' => $model->id]), 'modal' => ['title' => 'Update  Banners'], 'appearence' => ['icon' => 'edit', 'theme' => 'info']]);
+                        return Html::customButton(['type' => 'modal', 'url' => Url::toRoute(['update', 'id' => $model->id]), 'modal' => ['title' => 'Update  Testimonials'], 'appearence' => ['icon' => 'edit', 'theme' => 'info']]);
                     },
                     'trash' => function ($url, $model, $key) {
                         return $model->is_deleted !== 1 ?
-                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'trash', 'theme' => 'danger', 'data' => ['message' => 'Do you want to delete this banners?']]]) :
-                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'undo', 'theme' => 'warning', 'data' => ['message' => 'Do you want to restore this banners?']]]);
+                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'trash', 'theme' => 'danger', 'data' => ['message' => 'Do you want to delete this testimonials?']]]) :
+                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'undo', 'theme' => 'warning', 'data' => ['message' => 'Do you want to restore this testimonials?']]]);
                     },
                 ],
                 'visibleButtons' => [
-                    'update' => Yii::$app->user->can('dashboard-banners-update',true),
+                    'update' => Yii::$app->user->can('dashboard-testimonials-update',true),
                     'trash' => function ($model){
                          return $model->is_deleted !== 1 ? 
-                                Yii::$app->user->can('dashboard-banners-delete',true) : 
-                                Yii::$app->user->can('dashboard-banners-restore',true);
+                                Yii::$app->user->can('dashboard-testimonials-delete',true) : 
+                                Yii::$app->user->can('dashboard-testimonials-restore',true);
                     },
                 ],
             ],

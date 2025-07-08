@@ -1,18 +1,18 @@
 <?php
 
-use dashboard\models\Banners;
+use dashboard\models\Board;
 use helpers\Html;
 use yii\helpers\Url;
 use helpers\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var dashboard\models\searches\BannersSearch $searchModel */
+/** @var dashboard\models\searches\BoardSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Banners';
+$this->title = 'Boards';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="banners-index row">
+<div class="board-index row">
     <div class="col-md-12">
       <div class="block block-rounded">
         <div class="block-header block-header-default">
@@ -23,16 +23,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'url' => Url::to(['create']),
             'appearence' => [
               'type' => 'text',
-              'text' => 'Create Banners',
+              'text' => 'Create Board',
               'theme' => 'primary',
-              'visible' => Yii::$app->user->can('dashboard-banners-create', true)
+              'visible' => Yii::$app->user->can('dashboard-board-create', true)
             ],
-            'modal' => ['title' => 'New Banners']
+            'modal' => ['title' => 'New Board']
           ]) ?>
           </div> 
         </div>
         <div class="block-content">     
-    <div class="banners-search my-3">
+    <div class="board-search my-3">
     <?= $this->render('_search', ['model' => $searchModel]); ?>
     </div>
 
@@ -41,9 +41,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-     
-            'title',
-            'description:ntext',
+            // 'id',
+            'name',
+            'position:ntext',
             'image',
             // 'is_deleted',
             //'created_at',
@@ -55,20 +55,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions' => ['style'=>'text-align: center;'],
                  'buttons' => [
                     'update' => function ($url, $model, $key) {
-                        return Html::customButton(['type' => 'modal', 'url' => Url::toRoute(['update', 'id' => $model->id]), 'modal' => ['title' => 'Update  Banners'], 'appearence' => ['icon' => 'edit', 'theme' => 'info']]);
+                        return Html::customButton(['type' => 'modal', 'url' => Url::toRoute(['update', 'id' => $model->id]), 'modal' => ['title' => 'Update  Board'], 'appearence' => ['icon' => 'edit', 'theme' => 'info']]);
                     },
                     'trash' => function ($url, $model, $key) {
                         return $model->is_deleted !== 1 ?
-                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'trash', 'theme' => 'danger', 'data' => ['message' => 'Do you want to delete this banners?']]]) :
-                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'undo', 'theme' => 'warning', 'data' => ['message' => 'Do you want to restore this banners?']]]);
+                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'trash', 'theme' => 'danger', 'data' => ['message' => 'Do you want to delete this board?']]]) :
+                            Html::customButton(['type' => 'link', 'url' => Url::toRoute(['trash', 'id' => $model->id]),  'appearence' => ['icon' => 'undo', 'theme' => 'warning', 'data' => ['message' => 'Do you want to restore this board?']]]);
                     },
                 ],
                 'visibleButtons' => [
-                    'update' => Yii::$app->user->can('dashboard-banners-update',true),
+                    'update' => Yii::$app->user->can('dashboard-board-update',true),
                     'trash' => function ($model){
                          return $model->is_deleted !== 1 ? 
-                                Yii::$app->user->can('dashboard-banners-delete',true) : 
-                                Yii::$app->user->can('dashboard-banners-restore',true);
+                                Yii::$app->user->can('dashboard-board-delete',true) : 
+                                Yii::$app->user->can('dashboard-board-restore',true);
                     },
                 ],
             ],
@@ -79,4 +79,4 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 </div>
       </div>
-    </div>
+</div>
