@@ -3,53 +3,40 @@
 namespace dashboard\models;
 
 use Yii;
-/**
- *@OA\Schema(
- *  schema="Banners",
- *  @OA\Property(property="id", type="integer",title="Id", example="integer"),
- *  @OA\Property(property="title", type="string",title="Title", example="string"),
- *  @OA\Property(property="description", type="string",title="Description", example="string"),
- *  @OA\Property(property="image", type="string",title="Image", example="string"),
- *  @OA\Property(property="created_at", type="integer",title="Created at", example="integer"),
- *  @OA\Property(property="updated_at", type="integer",title="Updated at", example="integer"),
- * )
- */
 
-class Banners extends BaseModel
+/**
+ * This is the model class for table "banners".
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $description
+ * @property string $image
+ * @property int|null $is_deleted
+ * @property int $created_at
+ * @property int $updated_at
+ */
+class Banners extends \yii\db\ActiveRecord
 {
+
+
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return '{{%banners}}';
+        return 'banners';
     }
-    /**
-     * list of fields to output by the payload.
-     */
-    public function fields()
-    {
-        return array_merge(
-            parent::fields(), 
-            [
-            'id',
-            'title',
-            'description',
-            'image',
-            'created_at',
-            'updated_at',
-            ]
-        );
-    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['title', 'description', 'image', 'created_at', 'updated_at'], 'required'],
+            [['is_deleted'], 'default', 'value' => 0],
+            [['title', 'description',], 'required'],
             [['description'], 'string'],
-            [['created_at', 'updated_at'], 'integer'],
+            [['is_deleted', 'created_at', 'updated_at'], 'safe'],
             [['title', 'image'], 'string', 'max' => 255],
         ];
     }
@@ -64,8 +51,10 @@ class Banners extends BaseModel
             'title' => 'Title',
             'description' => 'Description',
             'image' => 'Image',
+            'is_deleted' => 'Is Deleted',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
     }
+
 }

@@ -125,6 +125,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 $_ENV['APP_VERSION'] . '/about' => 'site/about',
+                '/admin' => 'dashboard/',
                 '/' => 'site/index',
                 '/services' => 'site/services',
                 '/impact' => 'site/impact',
