@@ -9,7 +9,8 @@ use helpers\widgets\ActiveForm;
 ?>
 
 <div class="board-form">
-    <?php $form = ActiveForm::begin(['options' => ['data-pjax' => true]]);?>
+<?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'data-pjax' => true]]) ?> 
+
     <div class="row">
         <div class="col-md-12">
           <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
@@ -18,7 +19,13 @@ use helpers\widgets\ActiveForm;
           <?= $form->field($model, 'position')->textarea(['rows' => 6]) ?>
         </div>
         <div class="col-md-12">
-          <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'imageFile')->fileInput() ?>
+        <?php if ($model->image): ?>
+    <div class="mb-2">
+        <img src="<?= Yii::getAlias('@web') . '/' . $model->image ?>" alt="Current Board Image" style="max-width: 200px;">
+    </div>
+<?php endif; ?>
+
         </div>
         <div class="col-md-12">
      

@@ -7,6 +7,7 @@ use dashboard\models\Banners;
 use dashboard\models\searches\BannersSearch;
 use helpers\DashboardController;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 /**
  * BannersController implements the CRUD actions for Banners model.
@@ -38,12 +39,15 @@ class BannersController extends DashboardController
     }
     public function actionCreate()
     {
-        Yii::$app->user->can('dashboard-banners-create');
+        Yii::$app->user->can('dashboard-banners-create'); //permission check
         $model = new Banners();
+      
         if ($this->request->isPost) {
             if ($model->load(Yii::$app->request->post())) {
-                if ($model->validate()) {
-                    if ($model->save()) {
+                $model->imageFile = UploadedFile::getInstance($model,'imageFile');
+                if ($model->upload()) {
+                    if ($model->save(false)) {
+                        // $model->image = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
                         Yii::$app->session->setFlash('success', 'Banners created successfully');
                         return $this->redirect(['index']);
                     }
@@ -52,46 +56,54 @@ class BannersController extends DashboardController
         } else {
             $model->loadDefaultValues();
         }
+    
         if ($this->request->isAjax) {
-      
-            return $this->renderAjax('create', [
-                'model' => $model,
-            ]);
-        }else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-           
-        }   
-
-     
+            return $this->renderAjax('create', ['model' => $model]);
+        } else {
+            return $this->render('create', ['model' => $model]);
+        }
     }
     public function actionUpdate($id)
-    {
-        Yii::$app->user->can('dashboard-banners-update');
-        $model = $this->findModel($id);
+{
+    Yii::$app->user->can('dashboard-banners-update');
+    $model = $this->findModel($id);
+    $currentImage = $model->image; // Store current image path
 
-        if ($this->request->isPost) {
-            if ($model->load(Yii::$app->request->post())) {
-                if ($model->validate()) {
-                    if ($model->save()) {
-                        Yii::$app->session->setFlash('success', 'Banners updated successfully');
-                        return $this->redirect(['index']);
+    if ($this->request->isPost) {
+        if ($model->load(Yii::$app->request->post())) {
+            // Get uploaded file instance
+            $uploadedFile = UploadedFile::getInstance($model, 'imageFile');
+            
+            // Process only if a new file is uploaded
+            if ($uploadedFile) {
+                $model->imageFile = $uploadedFile;
+                
+                if ($model->upload()) {
+                    // Delete old image if exists
+                    if ($currentImage && file_exists($currentImage)) {
+                        unlink($currentImage);
                     }
+                } else {
+                    // Keep current image if upload fails
+                    $model->image = $currentImage;
                 }
             }
-        }
-     if ($this->request->isAjax) {
-            return $this->renderAjax('update', [
-                'model' => $model,
-            ]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+            
+            // Save the model
+            if ($model->save(false)) {
+                Yii::$app->session->setFlash('success', 'Banners updated successfully');
+                return $this->redirect(['index']);
+            }
         }
     }
-    public function actionTrash($id)
+
+    if ($this->request->isAjax) {
+        return $this->renderAjax('update', ['model' => $model]);
+    } else {
+        return $this->render('update', ['model' => $model]);
+    }
+} 
+   public function actionTrash($id)
     {
         $model = $this->findModel($id);
         if ($model->is_deleted) {
@@ -105,6 +117,20 @@ class BannersController extends DashboardController
         }
         return $this->redirect(['index']);
     }
+
+    public function actionUpload(){
+        $model = new Banners();
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return $this->redirect(['index']);
+            } else {
+                return $this->render('upload', ['model' => $model]);
+            }
+        }
+
+    }
     protected function findModel($id)
     {
         if (($model = Banners::findOne(['id' => $id])) !== null) {
@@ -113,4 +139,6 @@ class BannersController extends DashboardController
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
 }

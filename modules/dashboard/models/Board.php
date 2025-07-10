@@ -46,6 +46,9 @@ class Board extends BaseModel
     /**
      * {@inheritdoc}
      */
+
+    public $imageFile; // This property is used to handle file uploads
+
     public function rules()
     {
         return [
@@ -70,5 +73,27 @@ class Board extends BaseModel
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    public function upload()
+    {
+        // Remove the extra validation - we need to validate normally
+        if ($this->validate()) {
+            // Generate a safe filename instead of using title
+            // $fileName = Yii::$app->security->generateRandomString(10);
+            $fileName = $this->name; // Use the title property of the class
+            $directory = 'uploads/board/';
+            $path = $directory . $fileName . '.' . $this->imageFile->extension;
+            
+            // Create directory if it doesn't exist
+            if (!is_dir($directory)) {
+                mkdir($directory, 0755, true);
+            }
+            
+            $this->imageFile->saveAs($path);
+            $this->image = $path;
+            return true;
+        }
+        return false;
     }
 }

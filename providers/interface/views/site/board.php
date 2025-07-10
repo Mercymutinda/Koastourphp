@@ -54,10 +54,13 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
     <div class="row gy-4 justify-content-center">
       <?php
       $members = [
-        ['name' => 'Mawazo', 'img' => 'mawazo.jpg'],
-        ['name' => 'Ruth', 'img' => 'ruth.jpg'],
-        ['name' => 'dylan', 'img' => 'dylan.jpg'],
-       
+        ['name' => 'Raphael Lwoba', 'img' => 'avatars.png','position'=> 'Chair of the Board'],
+        ['name' => 'Cyril Karwa', 'img' => 'avatars.png', 'position' => 'Vice Chair of the Board'],
+        ['name' => 'Zahra Bonaya', 'img' => 'avatars.png', 'position' => 'Treasurer of the Board'],
+        ['name' => 'Ruth Mwatela', 'img' => 'ruth.jpg', 'position' => 'Treasurer of the Board'],
+        ['name' => 'Dylan Ingala', 'img' => 'dylan.jpg', 'position' => 'Communications coordinator'],
+
+        
       ];
 
       foreach ($members as $member) :
@@ -66,7 +69,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
           <div class="member-card">
             <img class="team-photo" src="<?= $basePath ?>assets/img/bg/<?= $member['img'] ?>" alt="<?= Html::encode($member['name']) ?>" />
             <div class="member-name"><?= Html::encode($member['name']) ?></div>
-            <div class="member-position text-dark">Board Member</div>
+            <div class="member-position text-dark"><?= Html::encode($member['position']) ?></div>
           </div>
         </div>
       <?php endforeach; ?>
