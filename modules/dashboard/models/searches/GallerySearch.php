@@ -18,7 +18,7 @@ class GallerySearch extends Gallery
     public function rules()
     {
         return [
-            [['id', 'is_deleted', 'created_at', 'updated_at'], 'integer'],
+            [['id','title', 'is_deleted', 'created_at', 'updated_at'], 'integer'],
             [['image'], 'safe'],
             ['globalSearch', 'safe']
         ];
@@ -64,6 +64,7 @@ class GallerySearch extends Gallery
         if(isset($this->globalSearch)){
                 $query->orFilterWhere([
             'id' => $this->globalSearch,
+
             'is_deleted' => $this->globalSearch,
             'created_at' => $this->globalSearch,
             'updated_at' => $this->globalSearch,
@@ -73,12 +74,15 @@ class GallerySearch extends Gallery
         }else{
                 $query->andFilterWhere([
             'id' => $this->id,
+            'title'=> $this->title,
             'is_deleted' => $this->is_deleted,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'image', $this->image]);
+        $query->andFilterWhere(['like', 'image', $this->image])
+              ->andFilterWhere(['like', 'title', $this->title]);
+
         }
         return $dataProvider;
     }

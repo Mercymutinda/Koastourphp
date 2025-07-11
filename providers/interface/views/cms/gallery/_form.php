@@ -12,7 +12,16 @@ use helpers\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(['options' => ['data-pjax' => true]]);?>
     <div class="row">
         <div class="col-md-12">
-          <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+          <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-12">
+        <?= $form->field($model, 'imageFile')->fileInput() ?>
+        <?php if ($model->image): ?>
+    <div class="mb-2">
+        <img src="<?= Yii::getAlias('@web') . '/' . $model->image ?>" alt="Current Gallery Image" style="max-width: 200px;">
+    </div>
+<?php endif; ?>
+
         </div>
        
     </div>

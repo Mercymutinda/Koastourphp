@@ -7,8 +7,6 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
 // $basePath = \Yii::$app->request->baseUrl . '/assets/site/';
 $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/'; 
 
-
-
 ?>
 <?= BreadcrumbWidget::widget([
     'title'=> 'Positive role models make all the difference',
@@ -42,15 +40,14 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
               data-slider-options='{"effect":"slide","loop":false,"thumbs":{"swiper":".testi-grid2-thumb"}}'
             >
               <div class="swiper-wrapper">
+              <?php foreach ($testimonials as $item): ?>
                 <div class="swiper-slide">
                   <div class="testi-grid2">
                     <div class="box-content">
                       <p class="box-text">
-                        “KOAS helped me discover who I really am. I never felt so connected to nature and to myself.”
-                      </p>
-                      <h6 class="box-title">Sarah </h6>
-                      <span class="box-desig">A KOAS youth participant</span>
-                      <div class="box-review">
+                      “<?= Html::encode($item->content) ?>”                      </p>
+          <h6 class="box-title"><?= Html::encode($item->name) ?></h6>
+          <span class="box-desig"><?= Html::encode($item->relation) ?></span>                      <div class="box-review">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -60,7 +57,8 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <?php endforeach; ?>
+                <!-- <div class="swiper-slide">
                   <div class="testi-grid2">
                     <div class="box-content">
                       <p class="box-text">
@@ -77,92 +75,8 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- <div class="swiper-slide">
-                  <div class="testi-grid2">
-                    <div class="box-content">
-                      <p class="box-text">
-                        “Solar panels adorn the roof, harnessing renewable
-                        energy to power the home and even feed excess
-                        electricity back into the grid. harnessing renewable
-                        energy to power the High-performance insulation and
-                        triple-glazed”
-                      </p>
-                      <h6 class="box-title">Michel Smith</h6>
-                      <span class="box-desig">Traveller</span>
-                      <div class="box-review">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testi-grid2">
-                    <div class="box-content">
-                      <p class="box-text">
-                        A sophisticated rainwater harvesting system collects and
-                        filters rainwater for irrigation and non-potable uses,
-                        reducing reliance on municipal water sources. rainwater
-                        harvesting system collects and Greywater systems
-                      </p>
-                      <h6 class="box-title">Jesmen</h6>
-                      <span class="box-desig">Traveller</span>
-                      <div class="box-review">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testi-grid2">
-                    <div class="box-content">
-                      <p class="box-text">
-                        Throughout the interior, eco-friendly materials like
-                        reclaimed wood, bamboo flooring, and recycled glass
-                        countertops create a luxurious yet interior eco-friendly
-                        materials like reclaimed wood, sustainable ambiance.
-                      </p>
-                      <h6 class="box-title">Sarah Rahman</h6>
-                      <span class="box-desig">Traveller</span>
-                      <div class="box-review">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testi-grid2">
-                    <div class="box-content">
-                      <p class="box-text">
-                        “A home that perfectly blends sustainability with luxury
-                        until I discovered Ecoland Residence. From the moment I
-                        stepped into this community, I knew it was where I
-                        wanted to live. The commitment to eco-friendly living”
-                      </p>
-                      <h6 class="box-title">Angelina Rose</h6>
-                      <span class="box-desig">Traveller</span>
-                      <div class="box-review">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
                 </div> -->
+            
               </div>
             </div>
             <div
@@ -171,38 +85,16 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
               data-slider-options='{"effect":"slide","slidesPerView":"6","spaceBetween":7,"loop":false}'
             >
               <div class="swiper-wrapper">
+              <?php foreach ($testimonials as $item): ?>
                 <div class="swiper-slide">
                   <div class="box-img">
-                    <img
-                      src="<?= $basePath ?>assets/img/testimonial/testi_4_1.png"
-                      alt="Image"
-                    />
+                  <img
+          src="<?= Yii::getAlias('@web') . '/' . Html::encode($item->image ?: 'default.jpg') ?>"
+          alt="<?= Html::encode($item->name) ?>"
+        />
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="box-img">
-                    <img
-                      src="<?= $basePath ?>assets/img/testimonial/testi_4_2.png"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <!-- <div class="swiper-slide">
-                  <div class="box-img">
-                    <img
-                      src="<?= $basePath ?>assets/img/testimonial/testi_4_3.png"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="box-img">
-                    <img
-                      src="<?= $basePath ?>assets/img/testimonial/testi_4_4.png"
-                      alt="Image"
-                    />
-                  </div>
-                </div> -->
+              <?php endforeach; ?>
               </div>
               <div class="icon-box">
                 <button
@@ -221,24 +113,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
             </div>
           </div>
         </div>
-        <!-- <div
-          class="shape-mockup d-none d-xl-block"
-          data-bottom="-23%"
-          data-left="-20%"
-        >
-          <img
-            class="gmovingX"
-            src="<?= $basePath ?>assets/img/shape/shape_17.png"
-            alt="shape"
-          />
-        </div>
-        <div
-          class="shape-mockup d-none d-xl-block"
-          data-bottom="23%"
-          data-right="-20%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_18.png" alt="shape" />
-        </div> -->
+     
       </div>
     </section>
 
@@ -294,47 +169,6 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
             </div>
           </div>
         </div>
-        <!-- <div
-          class="shape-mockup shape1 d-none d-xl-block"
-          data-top="40%"
-          data-left="-17%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_1.png" alt="shape" />
-        </div> -->
-        <!-- <div
-          class="shape-mockup shape2 d-none d-xl-block"
-          data-top="55%"
-          data-left="-18%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2.png" alt="shape" />
-        </div> -->
-        <!-- <div
-          class="shape-mockup shape3 d-none d-xl-block"
-          data-top="47%"
-          data-left="-10%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_3.png" alt="shape" />
-        </div> -->
-        <!-- <div
-          class="shape-mockup spin d-none d-xl-block"
-          data-bottom="-15%"
-          data-left="-15%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2_3.png" alt="shape" />
-        </div> -->
-        <!-- <div
-          class="shape-mockup jump d-none d-xl-block"
-          data-top="30%"
-          data-right="-14%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2_2.png" alt="shape" />
-        </div> -->
-        <!-- <div
-          class="shape-mockup spin d-none d-xl-block"
-          data-bottom="-10%"
-          data-right="-14%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2_5.png" alt="shape" />
-        </div> -->
+  
       </div>
     </div>

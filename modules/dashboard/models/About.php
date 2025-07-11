@@ -5,8 +5,10 @@ namespace dashboard\models;
 use Yii;
 /**
  *@OA\Schema(
- *  schema="Gallery",
+ *  schema="About",
  *  @OA\Property(property="id", type="integer",title="Id", example="integer"),
+ *  @OA\Property(property="title", type="string",title="Title", example="string"),
+ *  @OA\Property(property="content", type="string",title="Content", example="string"),
  *  @OA\Property(property="image", type="string",title="Image", example="string"),
  *  @OA\Property(property="is_deleted", type="int",title="Is deleted", example="int"),
  *  @OA\Property(property="created_at", type="int",title="Created at", example="int"),
@@ -14,14 +16,14 @@ use Yii;
  * )
  */
 
-class Gallery extends BaseModel
+class About extends BaseModel
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return '{{%gallery}}';
+        return '{{%about}}';
     }
     /**
      * list of fields to output by the payload.
@@ -33,6 +35,7 @@ class Gallery extends BaseModel
             [
             'id',
             'title',
+            'content',
             'image',
             'is_deleted',
             'created_at',
@@ -43,19 +46,16 @@ class Gallery extends BaseModel
     /**
      * {@inheritdoc}
      */
-    public $imageFile; // This property is used to handle file uploads
 
+    public $imageFile; // This property is used to handle file uploads
 
     public function rules()
     {
         return [
+            [['title', 'content'], 'required'],
+            [['content'], 'string'],
             [['is_deleted', 'created_at', 'updated_at'], 'integer'],
-            [['image','title'], 'string', 'max' => 255],
-         
-            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg, jpeg' ], // 10MB max size
-        [['imageFile'],'file','maxSize' => 1024 * 1024 * 10],
-    
-           
+            [['title', 'image'], 'string', 'max' => 255],
         ];
     }
 
@@ -67,6 +67,7 @@ class Gallery extends BaseModel
         return [
             'id' => 'ID',
             'title' => 'Title',
+            'content' => 'Content',
             'image' => 'Image',
             'is_deleted' => 'Is Deleted',
             'created_at' => 'Created At',
@@ -80,7 +81,7 @@ class Gallery extends BaseModel
             // Generate a safe filename instead of using title
             // $fileName = Yii::$app->security->generateRandomString(10);
             $fileName = $this->title; // Use the title property of the class
-            $directory = 'uploads/gallery/';
+            $directory = 'uploads/about/';
             $path = $directory . $fileName . '.' . $this->imageFile->extension;
             
             // Create directory if it doesn't exist

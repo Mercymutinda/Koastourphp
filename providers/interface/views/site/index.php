@@ -12,107 +12,47 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
     class="swiper th-slider hero-slider-1"
     id="heroSlide1"
     data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'>
+    
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/8.jpg"></div>
-          <div class="container">
-            <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
-                Nature, Adventure and Community.
-              </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
-                <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
-                <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
+      <?php foreach ($banners as $banner): ?>
+        <div class="swiper-slide">
+          <div class="hero-inner">
+            <div class="th-hero-bg" data-bg-src="<?= Yii::getAlias('@web') . '/' . Html::encode($banner->image) ?>"></div>
+            <div class="container">
+              <div class="hero-style1">
+                <?php if ($banner->description): ?>
+                  <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">
+                    <?= Html::encode($banner->description) ?>
+                  </span>
+                <?php endif; ?>
+                <?php if ($banner->title): ?>
+                  <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
+                    <?= Html::encode($banner->title) ?>
+                  </h1>
+                <?php endif; ?>
+                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
+                  <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
+                  <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/a.jpg"></div>
-          <div class="container">
-            <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
-                Nature, Adventure and Community.
-              </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
-                <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
-                <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/o.jpg"></div>
-          <div class="container">
-            <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
-                Nature, Adventure and Community.
-              </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
-                <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
-                <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
+
     <div class="th-swiper-custom">
-      <button
-        data-slider-prev="#heroSlide1"
-        class="slider-arrow slider-prev">
+      <button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev">
         <img src="<?= $basePath ?>assets/img/icon/right-arrow.svg" alt="arrow" />
       </button>
       <div class="slider-pagination"></div>
-      <button
-        data-slider-next="#heroSlide1"
-        class="slider-arrow slider-next">
+      <button data-slider-next="#heroSlide1" class="slider-arrow slider-next">
         <img src="<?= $basePath ?>assets/img/icon/left-arrow.svg" alt="arrow" />
       </button>
     </div>
   </div>
 </div>
+
 <div
   class="about-area position-relative overflow-hidden space"
   id="about-sec"

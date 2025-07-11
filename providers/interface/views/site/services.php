@@ -93,99 +93,21 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
 </div>
 <div class="container th-container2">
   <div class="row gy-24 gx-24 justify-content-center">
-    <div class="col-lg-3 gallery-box_wrapp">
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/new69.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/new69.jpg"
-              alt="gallery image" />
-          </a>
+    <?php foreach ($gallery as $item): ?>
+      <div class="col-lg-3 gallery-box_wrapp">
+        <div class="gallery-box">
+          <div class="gallery-img global-img">
+            <a href="<?= Yii::getAlias('@web') . '/' . Html::encode($item->image) ?>" class="popup-image">
+              <div class="icon-btn">
+                <i class="fal fa-magnifying-glass-plus"></i>
+              </div>
+              <img
+                src="<?= Yii::getAlias('@web') . '/' . Html::encode($item->image) ?>"
+                alt="<?= Html::encode($item->title ?: 'gallery image') ?>" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 gallery-box_wrapp">
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/f.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/f.jpg"
-              alt="gallery image" />
-          </a>
-        </div>
-      </div>
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/g.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/g.jpg"
-              alt="gallery image" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 gallery-box_wrapp">
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/h.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/h.jpg"
-              alt="gallery image" />
-          </a>
-        </div>
-      </div>
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/i.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/i.jpg"
-              alt="gallery image" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 gallery-box_wrapp">
-      <div class="gallery-box">
-        <div class="gallery-img global-img">
-          <a href="<?= $basePath ?>assets/img/bg/j.jpg" class="popup-image">
-            <div class="icon-btn">
-              <i class="fal fa-magnifying-glass-plus"></i>
-            </div>
-            <img
-              src="<?= $basePath ?>assets/img/bg/j.jpg"
-              alt="gallery image" />
-          </a>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
-  <!-- <div
-          class="shape-mockup movingX d-none d-xl-block"
-          data-bottom="35%"
-          data-right="-4%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2_1.png" alt="shape" />
-        </div>
-        <div
-          class="shape-mockup movingX d-none d-xl-block"
-          data-bottom="8%"
-          data-left="-10%"
-        >
-          <img src="<?= $basePath ?>assets/img/shape/shape_2_4.png" alt="shape" />
-        </div> -->
 </div>

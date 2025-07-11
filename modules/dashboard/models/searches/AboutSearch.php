@@ -4,12 +4,12 @@ namespace dashboard\models\searches;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use dashboard\models\Services;
+use dashboard\models\About;
 
 /**
- * ServicesSearch represents the model behind the search form of `dashboard\models\Services`.
+ * AboutSearch represents the model behind the search form of `dashboard\models\About`.
  */
-class ServicesSearch extends Services
+class AboutSearch extends About
 {
     /**
      * {@inheritdoc}
@@ -19,7 +19,7 @@ class ServicesSearch extends Services
     {
         return [
             [['id', 'is_deleted', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'content'], 'safe'],
+            [['title', 'content', 'image'], 'safe'],
             ['globalSearch', 'safe']
         ];
     }
@@ -42,7 +42,7 @@ class ServicesSearch extends Services
      */
     public function search($params)
     {
-        $query = Services::find();
+        $query = About::find();
 
         // add conditions that should always apply here
 
@@ -70,7 +70,8 @@ class ServicesSearch extends Services
         ]);
 
         $query->orFilterWhere(['like', 'title', $this->globalSearch])
-            ->orFilterWhere(['like', 'content', $this->globalSearch]);
+            ->orFilterWhere(['like', 'content', $this->globalSearch])
+            ->orFilterWhere(['like', 'image', $this->globalSearch]);
         }else{
                 $query->andFilterWhere([
             'id' => $this->id,
@@ -80,7 +81,8 @@ class ServicesSearch extends Services
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'content', $this->content]);
+            ->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'image', $this->image]);
         }
         return $dataProvider;
     }

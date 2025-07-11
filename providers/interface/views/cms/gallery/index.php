@@ -42,7 +42,18 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             // 'id',
-            'image',
+            'title',
+            [
+              'attribute' => 'image',
+              'format' => 'html',
+              'label' => 'Image',
+              'value' => function ($model) {
+                  return $model->image && file_exists($model->image)
+                      ? Html::img(Url::to('@web/' . $model->image), ['style' => 'max-height: 80px; max-width: 100px;'])
+                      : '<span class="text-muted">No image</span>';
+              },
+              'headerOptions' => ['style' => 'width:130px;'],
+          ],
             // 'is_deleted',
             // 'created_at',
             // 'updated_at',

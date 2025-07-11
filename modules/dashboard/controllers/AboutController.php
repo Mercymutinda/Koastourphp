@@ -3,34 +3,33 @@
 namespace dashboard\controllers;
 
 use Yii;
-use dashboard\models\Board;
-use dashboard\models\searches\BoardSearch;
+use dashboard\models\About;
+use dashboard\models\searches\AboutSearch;
 use helpers\DashboardController;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 
 
 /**
- * BoardController implements the CRUD actions for Board model.
+ * AboutController implements the CRUD actions for About model.
  */
-class BoardController extends DashboardController
+class AboutController extends DashboardController
 {
     public $permissions = [
-        'dashboard-board-list'=>'View Board List',
-        'dashboard-board-create'=>'Add Board',
-        'dashboard-board-update'=>'Edit Board',
-        'dashboard-board-delete'=>'Delete Board',
-        'dashboard-board-restore'=>'Restore Board',
+        'dashboard-about-list'=>'View About List',
+        'dashboard-about-create'=>'Add About',
+        'dashboard-about-update'=>'Edit About',
+        'dashboard-about-delete'=>'Delete About',
+        'dashboard-about-restore'=>'Restore About',
         ];
-
-    public function getViewPath()
-        {
-            return Yii::getAlias('@ui/views/cms/board');
-        }  
+        public function getViewPath()
+    {
+        return Yii::getAlias('@ui/views/cms/about');
+    }    
     public function actionIndex()
     {
-        Yii::$app->user->can('dashboard-board-list');
-        $searchModel = new BoardSearch();
+        Yii::$app->user->can('dashboard-about-list');
+        $searchModel = new AboutSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -40,8 +39,8 @@ class BoardController extends DashboardController
     }
     public function actionCreate()
     {
-        Yii::$app->user->can('dashboard-board-create'); //permission check
-        $model = new Board();
+        Yii::$app->user->can('dashboard-about-create'); //permission check
+        $model = new About();
       
         if ($this->request->isPost) {
             if ($model->load(Yii::$app->request->post())) {
@@ -49,7 +48,7 @@ class BoardController extends DashboardController
                 if ($model->upload()) {
                     if ($model->save(false)) {
                         // $model->image = 'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
-                        Yii::$app->session->setFlash('success', 'Board created successfully');
+                        Yii::$app->session->setFlash('success', 'About created successfully');
                         return $this->redirect(['index']);
                     }
                 }
@@ -66,7 +65,7 @@ class BoardController extends DashboardController
     }
     public function actionUpdate($id)
 {
-    Yii::$app->user->can('dashboard-board-update');
+    Yii::$app->user->can('dashboard-about-update');
     $model = $this->findModel($id);
     $currentImage = $model->image; // Store current image path
 
@@ -92,7 +91,7 @@ class BoardController extends DashboardController
             
             // Save the model
             if ($model->save(false)) {
-                Yii::$app->session->setFlash('success', 'Board updated successfully');
+                Yii::$app->session->setFlash('success', 'About updated successfully');
                 return $this->redirect(['index']);
             }
         }
@@ -104,25 +103,23 @@ class BoardController extends DashboardController
         return $this->render('update', ['model' => $model]);
     }
 } 
-
- 
     public function actionTrash($id)
     {
         $model = $this->findModel($id);
         if ($model->is_deleted) {
-            Yii::$app->user->can('dashboard-board-restore');
+            Yii::$app->user->can('dashboard-about-restore');
             $model->restore();
-            Yii::$app->session->setFlash('success', 'Board has been restored');
+            Yii::$app->session->setFlash('success', 'About has been restored');
         } else {
-            Yii::$app->user->can('dashboard-board-delete');
+            Yii::$app->user->can('dashboard-about-delete');
             $model->delete();
-            Yii::$app->session->setFlash('success', 'Board has been deleted');
+            Yii::$app->session->setFlash('success', 'About has been deleted');
         }
         return $this->redirect(['index']);
     }
     protected function findModel($id)
     {
-        if (($model = Board::findOne(['id' => $id])) !== null) {
+        if (($model = About::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

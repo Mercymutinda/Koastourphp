@@ -30,95 +30,25 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       </div>
     </div>
     <div class="row gy-80">
+    <?php foreach ($about as $item): ?>
       <div class="col-md-6 col-xl-4">
         <div class="choose-item">
           <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_1.svg" alt="image" />
+          <img
+          class="team-photo"
+          src="<?= Yii::getAlias('@web') . '/' . Html::encode($item->image ?: 'default.jpg') ?>"
+          alt="<?= Html::encode($item->title) ?>"
+        />
           </div>
           <div class="media-body">
-            <h3 class="box-title">Integration and Socialization</h3>
+            <h3 class="box-title"><?= Html::encode($item->title) ?></h3>
             <p class="box-text">
-              Outdoor activities provide a platform for immigrant youth
-              to connect with their peers, build friendships, and integrate
-              into the local community. These experiences foster a
-              sense of belonging and help combat feelings of isolation.
+            <?= Html::encode($item->content) ?>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-xl-4">
-        <div class="choose-item">
-          <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_2.svg" alt="image" />
-          </div>
-          <div class="media-body">
-            <h3 class="box-title"> Physical and Mental Well-being</h3>
-            <p class="box-text">
-              Engaging in outdoor activities promotes physical fitness,
-              mental well-being, and stress reduction. For immigrant youth,
-              who may face additional stressors related to cultural adaptation,
-              these activities offer a healthy outlet and a chance to
-              unwind and encourage the youth to pursue healthy lifestyles.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <div class="choose-item">
-          <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_3.svg" alt="image" />
-          </div>
-          <div class="media-body">
-            <h3 class="box-title">Skill Development</h3>
-            <p class="box-text">
-              We integrate mentorship opportunities with the outdoor activities
-              to impart knowledge and enhance various skills, such as teamwork,
-              leadership, problem-solving, and communication. By participating
-              in group hikes, sports, or environmental conservation projects,
-              immigrant youth can develop valuable life skills.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <div class="choose-item">
-          <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_4.svg" alt="image" />
-          </div>
-          <div class="media-body">
-            <h3 class="box-title">Cultural Exchange</h3>
-            <p class="box-text">
-              Outdoor events create opportunities for cultural exchange. Immigrant youth can share their traditions, languages, and customs with others, fostering mutual understanding and appreciation.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <div class="choose-item">
-          <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_5.svg" alt="image" />
-          </div>
-          <div class="media-body">
-            <h3 class="box-title">Empowerment and Confidence</h3>
-            <p class="box-text">
-              Successfully participating in outdoor activities boosts self-confidence and empowers youth. Overcoming challenges like rock climbing, camping, or kayaking instills a sense of achievement and resilience.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <div class="choose-item">
-          <div class="box-icon">
-            <img src="<?= $basePath ?>assets/img/icon/choose_3_6.svg" alt="image" />
-          </div>
-          <div class="media-body">
-            <h3 class="box-title">Environmental Stewardship</h3>
-            <p class="box-text">
-              Organizing outdoor events encourages environmental awareness and stewardship. Immigrant youth can learn about local ecosystems, wildlife, and sustainable practices while enjoying nature.
-            </p>
-          </div>
-        </div>
-      </div>
+    <?php endforeach; ?>
     </div>
   </div>
 </div>

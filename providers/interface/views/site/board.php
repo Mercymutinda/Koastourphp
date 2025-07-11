@@ -52,23 +52,15 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
       <h2 class="sec-title">Our Board Members</h2>
       <p class="mb-60 text-dark">We are a team of dedicated individuals committed to empowering youth through outdoor activities and community engagement.</p>
     <div class="row gy-4 justify-content-center">
-      <?php
-      $members = [
-        ['name' => 'Raphael Lwoba', 'img' => 'avatars.png','position'=> 'Chair of the Board'],
-        ['name' => 'Cyril Karwa', 'img' => 'avatars.png', 'position' => 'Vice Chair of the Board'],
-        ['name' => 'Zahra Bonaya', 'img' => 'avatars.png', 'position' => 'Treasurer of the Board'],
-        ['name' => 'Ruth Mwatela', 'img' => 'ruth.jpg', 'position' => 'Treasurer of the Board'],
-        ['name' => 'Dylan Ingala', 'img' => 'dylan.jpg', 'position' => 'Communications coordinator'],
-
-        
-      ];
-
-      foreach ($members as $member) :
-      ?>
+      <?php foreach ($boardMembers as $member): ?>
         <div class="col-lg-3 col-md-4 col-6">
           <div class="member-card">
-            <img class="team-photo" src="<?= $basePath ?>assets/img/bg/<?= $member['img'] ?>" alt="<?= Html::encode($member['name']) ?>" />
-            <div class="member-name"><?= Html::encode($member['name']) ?></div>
+            <img
+          class="team-photo"
+          src="<?= Yii::getAlias('@web') . '/' . Html::encode($member->image ?: 'default.jpg') ?>"
+          alt="<?= Html::encode($member->name) ?>"
+        />
+            <div class="member-name"><?= Html::encode($member->name) ?></div>
             <div class="member-position text-dark"><?= Html::encode($member['position']) ?></div>
           </div>
         </div>

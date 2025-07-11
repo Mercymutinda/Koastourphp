@@ -4,6 +4,12 @@ namespace main\controllers;
 
 use Yii;
 use yii\web\Response;
+use dashboard\models\Testimonials;
+use dashboard\models\Gallery;
+use dashboard\models\Banners;
+use dashboard\models\Board;
+use dashboard\models\About;
+
 
 class SiteController extends \helpers\WebController
 {
@@ -34,15 +40,34 @@ class SiteController extends \helpers\WebController
     }
     public function actionIndex()
     {
-        return $this->render('index');
-    }
+        $banners = Banners::find()
+        ->where(['is_deleted' => 0])
+        ->orderBy(['created_at' => SORT_DESC])
+        ->limit(12)
+        ->all();
+    return $this->render('index', [
+        'banners' => $banners
+    ]);
+}
     public function actionAbout()
     {
-        return $this->render('about');
+        $about = About::find()
+            ->where(['is_deleted' => 0])
+            ->all();
+        return $this->render('about', [
+            'about' => $about
+        ]);
     }
     public function actionServices()
     {
-        return $this->render('services');
+        $gallery = Gallery::find()
+            ->where(['is_deleted' => 0])
+            ->orderBy(['created_at' => SORT_DESC])
+            ->limit(12)
+            ->all();
+        return $this->render('services', [
+            'gallery' => $gallery
+        ]);
     }
     public function actionSupport()
     {
@@ -54,8 +79,19 @@ class SiteController extends \helpers\WebController
     }
     public function actionImpact()
     {
-        return $this->render('impact');
+    $testimonials = Testimonials::find()
+        ->where(['is_deleted' => 0])
+        ->all();
+
+    return $this->render('impact', [
+        'testimonials' => $testimonials
+    ]);
     }
+
+    // public function actionImpact()
+    // {
+    //     return $this->render('impact');
+    // }
     public function actionDonate()
     {
         return $this->render('donate');
@@ -68,7 +104,13 @@ class SiteController extends \helpers\WebController
         return $this->render('partner');
     }   public function actionBoard()
     {
-        return $this->render('board');
+        $boardMembers = Board::find()
+            ->where(['is_deleted' => 0])
+            ->all();
+
+        return $this->render('board', [
+            'boardMembers' => $boardMembers
+        ]);
     }
     public function actionDocs($mod = 'dashboard')
     {

@@ -22,16 +22,18 @@ class m250705_144036_cms extends Migration
         
         $this->createTable("gallery", [
             "id"=> $this->primaryKey(),
+            "title"=> $this->string(255)->notNull(),
             "image"=> $this->string(255),
             'is_deleted' => $this->boolean()->defaultValue(false),
             'created_at' => $this->integer(),
             'updated_at' => $this->integer(),
         ]
         );
-        $this->createTable("services", [
+        $this->createTable("about", [
             "id"=> $this->primaryKey(),
             "title"=> $this->string(255)->notNull(),
             "content"=> $this->text()->notNull(),
+            "image"=> $this->string(255),
             'is_deleted' => $this->boolean()->defaultValue(false),
             'created_at' => $this->integer(),
             'updated_at' => $this->integer(),
