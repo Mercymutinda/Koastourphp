@@ -99,7 +99,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
   </div>
   <div class="copyright-wrap">
     <div class="container">
-      <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
           <p class="copyright-text">
             Kifaru Outdoors Adventures Society.
@@ -107,14 +107,14 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
             Reserved.
           </p>
         </div>
-        <div class=" col-lg-3 col-md-6">
+        <!-- <div class=" col-lg-3 col-md-6">
           <div class="copyright-menu">
           <p>
             Developed by
          <a class="text-primary" href="https://www.github.com"> <?= $_SERVER['APP_DEVELOPER'] ?></a>
           </p>  
           </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- <div
