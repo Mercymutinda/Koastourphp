@@ -3,7 +3,7 @@
         'name' => 'yiisoft/yii2-app-basic',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd722b4a5c7e7c3b7f41eaba595145786bd7ac041',
+        'reference' => '106474f49dd0b520cd81e349d7ce3952b77c0fc4',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -251,8 +251,8 @@
             'dev_requirement' => false,
         ),
         'google/apiclient-services' => array(
-            'pretty_version' => 'v0.401.0',
-            'version' => '0.401.0.0',
+            'pretty_version' => 'v0.402.0',
+            'version' => '0.402.0.0',
             'reference' => '8366037e450b62ffc1c5489459f207640acca2b4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../google/apiclient-services',
@@ -965,7 +965,7 @@
         'yiisoft/yii2-app-basic' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd722b4a5c7e7c3b7f41eaba595145786bd7ac041',
+            'reference' => '106474f49dd0b520cd81e349d7ce3952b77c0fc4',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

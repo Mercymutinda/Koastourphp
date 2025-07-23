@@ -99,25 +99,24 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
   </div>
   <div class="copyright-wrap">
     <div class="container">
-      <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
           <p class="copyright-text">
             Kifaru Outdoors Adventures Society.
             Copyright 2025 . All Rights
-            Reserved.
+            Reserved
+          <div class="d-done">
+            <a>
+              <a  class="d-none" href="https://github.com/crackitsoft"><?= $_SERVER['APP_DEVELOPER'] ?></a>
+            </a>
+          </div>
           </p>
         </div>
-        <div class=" col-lg-3 col-md-6">
-          <div class="copyright-menu">
-          <p>
-            Developed by
-         <a class="text-primary" href="https://www.github.com"> <?= $_SERVER['APP_DEVELOPER'] ?></a>
-          </p>  
-          </div>
+
       </div>
     </div>
-  </div>
-  <!-- <div
+
+    <!-- <div
         class="shape-mockup spin d-none d-xxl-block"
         data-top="10%"
         data-left="4%"
