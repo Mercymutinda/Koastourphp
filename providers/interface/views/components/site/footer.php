@@ -104,7 +104,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           <p class="copyright-text">
             Kifaru Outdoors Adventures Society.
             Copyright 2025 . All Rights
-            Reserved.
+            Reserved<span><a  class="" href="https://github.com/crackitsoft">.<p class="d-none"><?= $_SERVER['APP_DEVELOPER'] ?></p></a></span>
           <div class="d-done">
             <a>
               <a  class="d-none" href="https://github.com/crackitsoft"><?= $_SERVER['APP_DEVELOPER'] ?></a>
