@@ -54,9 +54,9 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
     <div class="row gy-4 justify-content-center">
       <?php
       $members = [
-        ['name' => 'Raphael Lwoba', 'img' => 'avatars.png','position'=> 'Chair of the Board'],
+        ['name' => 'Raphael Lwoba', 'img' => 'Raphael.jpg','position'=> 'Chair of the Board'],
         ['name' => 'Cyril Karwa', 'img' => 'avatars.png', 'position' => 'Vice Chair of the Board'],
-        ['name' => 'Zahra Bonaya', 'img' => 'avatars.png', 'position' => 'Treasurer of the Board'],
+        ['name' => 'Zahra Bonaya', 'img' => 'Zahra.jpg', 'position' => 'Treasurer of the Board'],
         ['name' => 'Ruth Mwatela', 'img' => 'ruth.jpg', 'position' => 'Treasurer of the Board'],
         ['name' => 'Dylan Ingala', 'img' => 'dylan.jpg', 'position' => 'Communications coordinator'],
 
