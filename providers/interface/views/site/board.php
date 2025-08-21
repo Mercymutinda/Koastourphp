@@ -55,7 +55,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
       <?php
       $members = [
         ['name' => 'Raphael Lwoba', 'img' => 'Raphael.jpg','position'=> 'Chair of the Board'],
-        ['name' => 'Cyril Karwa', 'img' => 'avatars.png', 'position' => 'Vice Chair of the Board'],
+        ['name' => 'Cyril Karwa', 'img' => 'Cyril.jpg', 'position' => 'Vice Chair of the Board'],
         ['name' => 'Zahra Bonaya', 'img' => 'Zahra.jpg', 'position' => 'Treasurer of the Board'],
         ['name' => 'Ruth Mwatela', 'img' => 'ruth.jpg', 'position' => 'Treasurer of the Board'],
         ['name' => 'Dylan Ingala', 'img' => 'dylan.jpg', 'position' => 'Communications coordinator'],
