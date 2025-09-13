@@ -97,6 +97,36 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           </div>
         </div>
       </div>
+      <div class="swiper-slide">
+        <div class="hero-inner">
+          <div
+            class="th-hero-bg"
+            data-bg-src="<?= $basePath ?>assets/img/bg/even.jpg"></div>
+          <div class="container">
+            <div class="hero-style1">
+              <span
+                class="sub-title style1"
+                data-ani="slideinup"
+                data-ani-delay="0.2s">
+                Embrace the Spirit of Adventure
+              </span>
+              <h1
+                class="hero-title"
+                data-ani="slideinup"
+                data-ani-delay="0.4s">
+                Inspiring Growth, Creating Leaders.
+              </h1>
+              <div
+                class="btn-group"
+                data-ani="slideinup"
+                data-ani-delay="0.6s">
+                <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
+                <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="th-swiper-custom">
       <button
