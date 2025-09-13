@@ -284,6 +284,43 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
   </div>
 </section>
 
+<!-- ====== Events Section Start ====== -->
+<section class="py-5" id="events">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="text-uppercase text-primary d-block">Our Events</span>
+      <h2 class="fw-bold">Upcoming Adventures</h2>
+    </div>
+
+    <!-- Event 1 -->
+    <div class="row align-items-center mb-4">
+      <div class="col-md-4">
+      <img src="<?= $basePath ?>assets/img/bg/event.jpeg" alt="arrow" />
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold"> The Orange Shirt Day</h3>
+        <p class="text-muted mb-1">Sep 27, 2025</p>
+    <p>
+      Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head Interpretative Trail, Beacon, Manitoba.
+    </p>
+    <p>
+      <strong>Meet-up Location:</strong> The Legislative Building<br>
+      <strong>Departure:</strong> 10:30 AM<br>
+      <strong>Return:</strong> 5:30 PM<br>
+      <strong>Note:</strong> Food and transport will be provided.
+    </p>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    
+
+    <!-- Event 3 -->
+    
+  </div>
+</section>
+<!-- ====== Events Section End ====== -->
+
 <!-- sponsors -->
 <!-- <div class="brand-area overflow-hidden space-bottom">
       <div class="container th-container">
