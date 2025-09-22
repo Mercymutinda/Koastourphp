@@ -101,7 +101,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
         <div class="hero-inner">
           <div
             class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/even.jpg"></div>
+            data-bg-src="<?= $basePath ?>assets/img/bg/image.jpg"></div>
           <div class="container">
             <div class="hero-style1">
               <span
@@ -295,13 +295,13 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
     <!-- Event 1 -->
     <div class="row align-items-center mb-4">
       <div class="col-md-4">
-      <img src="<?= $basePath ?>assets/img/bg/event.jpeg" alt="arrow" />
+      <img src="<?= $basePath ?>assets/img/bg/image.jpeg" alt="arrow" />
       </div>
       <div class="col-md-8">
         <h3 class="fw-bold"> The Orange Shirt Day</h3>
         <p class="text-muted mb-1">Sep 27, 2025</p>
     <p>
-      Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head Interpretative Trail, Beacon, Manitoba.
+      Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head Interpretative Trail, Beaconia, Manitoba.
     </p>
     <p>
       <strong>Meet-up Location:</strong> The Legislative Building<br>
