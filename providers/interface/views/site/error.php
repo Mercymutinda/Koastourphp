@@ -18,7 +18,10 @@ $this->title = $name;
                 <div class="py-4">
                     <!-- Error Header -->
                     <h1 class="display-1 fw-bolder text-city">
-                        <?= rtrim(explode('#', $name)[1], ')') ?>
+                        <?php
+                        $parts = explode('#', $name);
+                        echo isset($parts[1]) ? rtrim($parts[1], ')') : Html::encode($name);
+                        ?>
                     </h1>
                     <h2 class="h4 fw-normal text-danger mb-5">
                         <?= nl2br(Html::encode($message)) ?>
@@ -27,7 +30,7 @@ $this->title = $name;
                         <p class="mb-1">
                             The above error occurred while the Web server was processing your request.
                         </p>
-                        <a class="link-fx" href="<?=Url::to(['/dashboard'])?>">Go Back to Dashboard</a>
+                        <a class="link-fx" href="<?= Url::to(['/dashboard']) ?>">Go Back to Dashboard</a>
                     </h2>
                     <!-- END Error Header -->
                 </div>

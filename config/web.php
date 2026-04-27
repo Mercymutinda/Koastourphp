@@ -10,7 +10,7 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'main\controllers',
     'timeZone' => 'Africa/Nairobi',
-    'aliases' =>  $wrapper->load('aliases'),
+    'aliases' => $wrapper->load('aliases'),
     'modules' => $wrapper->load('modules'),
     'runtimePath' => dirname(__DIR__) . '/providers/bin',
     'components' => [
@@ -32,7 +32,7 @@ $config = [
                 'basePath' => '@ui/views',
                 'pathMap' => [
                     '@app/views' => '@ui/views',
-                    '@dashboard/views' => '@ui/views',
+                    // '@dashboard/views' => '@ui/views',
                 ],
             ],
         ],
@@ -69,7 +69,8 @@ $config = [
             'class' => \helpers\auth\AuthUser::class,
             'identityClass' => 'auth\models\User',
             'enableAutoLogin' => false,
-            'loginUrl' => ['dashboard/iam/login'],
+            // 'loginUrl' => ['dashboard/iam/login'],
+            'loginUrl' => ['/'],
             'identityCookie' => ['name' => '_identity-' . $_ENV['APP_CODE'], 'httpOnly' => true]
         ],
         'authManager' => [
@@ -79,36 +80,36 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-     
+
         // 'mailer' => [
         //     'class' => 'yii\swiftmailer\Mailer',
         //     'viewPath' => '@app/mail',
         //     'useFileTransport' => false,
         //     'transport' => [
         //               'class' => 'Swift_SmtpTransport',
-        //               'host' => 'smtp.gmail.com',
-        //               'username' => 'mutuavictor476@gmail.com',
-        //               'password' => "bdgv mitc grnc kgbm",
+        //               'host' => '
+        // 
+        // .gmail.com',
+        //               'username' => 'mercymutinda04@gmail.com',
+        //               'password' => "vjff eixj rydk goez",
         //               'port' => '587',
         //               'encryption' => 'tls',
         //           ],
         // ],
         // 
         'mailer' => [
-            'class' => \yii\symfonymailer\Mailer::class,
-            'transport' => [
-                'class' => \Swift_SmtpTransport::class,
-                'host' => 'smtp.gmail.com',
-                'username' => 'mutuavictor476@gmail.com',
-                'password' => 'bdgv mitc grnc kgbm',
-                'port' => 465,
-                'scheme' => 'smtps',
-                'encryption' => 'tls',
-            ],
+            'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@app/mail',
             'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => 'mercymutinda04@gmail.com',
+                'password' => 'vjff eixj rydk goez',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
         ],
-        
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -142,10 +143,10 @@ $config = [
                 [
                     'class' => 'yii\rest\UrlRule',
                     'pluralize' => false,
-                    'prefix' =>  $_ENV['APP_VERSION'],
+                    'prefix' => $_ENV['APP_VERSION'],
                     'controller' => $wrapper->load('controllers'),
                     'extraPatterns' => $wrapper->load('routes'),
-                    'tokens' =>  $wrapper->load('tokens'),
+                    'tokens' => $wrapper->load('tokens'),
                 ],
             ],
         ],
@@ -166,8 +167,8 @@ if ($_SERVER['ENVIRONMENT'] == 'dev') {
         'allowedIPs' => ['*'],
         'generators' => [
             'crud' => [
-                'class'     =>  \coder\mono\crud\Generator::class,
-                'baseControllerClass' =>  'helpers\DashboardController',
+                'class' => \coder\mono\crud\Generator::class,
+                'baseControllerClass' => 'helpers\DashboardController',
             ],
             /* 'module' => [
                 'class'     =>  \coder\api\module\Generator::class,
@@ -175,5 +176,5 @@ if ($_SERVER['ENVIRONMENT'] == 'dev') {
         ],
     ];
 }
-array_push($config,);
+// array_push($config,);
 return $config;

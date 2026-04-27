@@ -1,6 +1,6 @@
 <?php
 
-namespace auth\models\static;
+namespace auth\models\statics;
 
 use Yii;
 use yii\base\Model;

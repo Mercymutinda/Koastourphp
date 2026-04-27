@@ -8,32 +8,19 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
 
 ?>
 <div class="th-hero-wrapper hero-1" id="hero">
-  <div
-    class="swiper th-slider hero-slider-1"
-    id="heroSlide1"
+  <div class="swiper th-slider hero-slider-1" id="heroSlide1"
     data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'>
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/8.jpg"></div>
+          <div class="th-hero-bg" data-bg-src="<?= $basePath ?>assets/img/bg/8.jpg"></div>
           <div class="container">
             <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
+              <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Empowering Youth Through</span>
+              <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
                 Nature, Adventure and Community.
               </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
+              <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                 <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
                 <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
               </div>
@@ -43,25 +30,14 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       </div>
       <div class="swiper-slide">
         <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/a.jpg"></div>
+          <div class="th-hero-bg" data-bg-src="<?= $basePath ?>assets/img/bg/a.jpg"></div>
           <div class="container">
             <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
+              <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Empowering Youth Through</span>
+              <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
                 Nature, Adventure and Community.
               </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
+              <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                 <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
                 <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
               </div>
@@ -71,25 +47,14 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       </div>
       <div class="swiper-slide">
         <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/o.jpg"></div>
+          <div class="th-hero-bg" data-bg-src="<?= $basePath ?>assets/img/bg/o.jpg"></div>
           <div class="container">
             <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">Empowering Youth Through</span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
+              <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Empowering Youth Through</span>
+              <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
                 Nature, Adventure and Community.
               </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
+              <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                 <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
                 <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
               </div>
@@ -99,27 +64,16 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       </div>
       <div class="swiper-slide">
         <div class="hero-inner">
-          <div
-            class="th-hero-bg"
-            data-bg-src="<?= $basePath ?>assets/img/bg/image.jpg"></div>
+          <div class="th-hero-bg" data-bg-src="<?= $basePath ?>assets/img/bg/image.jpg"></div>
           <div class="container">
             <div class="hero-style1">
-              <span
-                class="sub-title style1"
-                data-ani="slideinup"
-                data-ani-delay="0.2s">
+              <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">
                 Embrace the Spirit of Adventure
               </span>
-              <h1
-                class="hero-title"
-                data-ani="slideinup"
-                data-ani-delay="0.4s">
+              <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">
                 Inspiring Growth, Creating Leaders.
               </h1>
-              <div
-                class="btn-group"
-                data-ani="slideinup"
-                data-ani-delay="0.6s">
+              <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                 <a href="<?= Url::to(['site/contact']) ?>" class="th-btn th-icon">Contact Us</a>
                 <a href="<?= Url::to(['site/services']) ?>" class="th-btn style2 th-icon">Our Services</a>
               </div>
@@ -129,24 +83,17 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
       </div>
     </div>
     <div class="th-swiper-custom">
-      <button
-        data-slider-prev="#heroSlide1"
-        class="slider-arrow slider-prev">
+      <button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev">
         <img src="<?= $basePath ?>assets/img/icon/right-arrow.svg" alt="arrow" />
       </button>
       <div class="slider-pagination"></div>
-      <button
-        data-slider-next="#heroSlide1"
-        class="slider-arrow slider-next">
+      <button data-slider-next="#heroSlide1" class="slider-arrow slider-next">
         <img src="<?= $basePath ?>assets/img/icon/left-arrow.svg" alt="arrow" />
       </button>
     </div>
   </div>
 </div>
-<div
-  class="about-area position-relative overflow-hidden space"
-  id="about-sec"
-  >
+<div class="about-area position-relative overflow-hidden space" id="about-sec">
   <div class="container">
     <div class="row">
       <div class="col-xl-6">
@@ -207,39 +154,31 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
   </div>
 </div>
 
-<section
-      class="cta-area py-xl-5 py-lg-4 py-md-3 py-sm-2 space"
-      data-overlay="title"
-      data-opacity="8"
-      data-bg-src="<?= $basePath?>/assets/img/bg/y.jpg "
-      
-    >
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-5 pe-xl-4 ps-xl-4 ">
-            <div class="title-area mb-30 mt-n3 text-center">
-              <h2 class="sec-title text-white text-capitalize">
-                get updated the latest news
-              </h2>
-            </div>
-            <form class="newsletter-form style3">
-            
-              <a type="button" href="<?= Url::to(['site/about']) ?>" class="th-btn style1 btn-fw mb-3">
-                About Us<img src="<?= $basePath?>assets/img/icon/plane2.svg" alt="" />
-              </a>
-              <a type="button" href="<?= Url::to(['site/support']) ?>" class="th-btn style1 btn-fw">
-                Support a Youth <img src="<?= $basePath?>assets/img/icon/plane2.svg" alt="" />
-              </a>
-            </form>
-          </div>
+<section class="cta-area py-xl-5 py-lg-4 py-md-3 py-sm-2 space" data-overlay="title" data-opacity="8"
+  data-bg-src="<?= $basePath ?>/assets/img/bg/y.jpg ">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5 pe-xl-4 ps-xl-4 ">
+        <div class="title-area mb-30 mt-n3 text-center">
+          <h2 class="sec-title text-white text-capitalize">
+            get updated the latest news
+          </h2>
         </div>
+        <form class="newsletter-form style3">
+
+          <a type="button" href="<?= Url::to(['site/about']) ?>" class="th-btn style1 btn-fw mb-3">
+            About Us<img src="<?= $basePath ?>assets/img/icon/plane2.svg" alt="" />
+          </a>
+          <a type="button" href="<?= Url::to(['site/support']) ?>" class="th-btn style1 btn-fw">
+            Support a Youth <img src="<?= $basePath ?>assets/img/icon/plane2.svg" alt="" />
+          </a>
+        </form>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 <!-- our impact -->
-<section
-  class="testi-area7 bg-smoke overflow-hidden space"
-  id="testi-sec"
-  >
+<section class="testi-area7 bg-smoke overflow-hidden space" id="testi-sec">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xl-6">
@@ -247,16 +186,18 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           <span class="sub-title">Our Impact</span>
           <h2 class="sec-title">Changing Lives One Adventure at a Time</h2>
         </div>
-        <div
-          class="swiper th-slider testiSlide5"
-          id="testiSlide7"
+        <div class="swiper th-slider testiSlide5" id="testiSlide7"
           data-slider-options='{"effect":"slide","loop":false,"thumbs":{"swiper":".testi-grid2-thumb"}}'>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testi-grid2">
                 <div class="box-content">
                   <p class="box-text">
-                    “At KOAS, we've empowered over 300 youth, helping them build confidence through challenge, nature, and connection. With more than 50 outdoor adventures, we’ve turned the wilderness into both a playground and a classroom. More than 200 volunteers have stepped up to shape the next generation. Together, we’ve planted over 300 trees, healing not just the Earth, but the hearts and hopes of our youth—one seed at a time.”
+                    “At KOAS, we've empowered over 300 youth, helping them build confidence through challenge, nature,
+                    and connection. With more than 50 outdoor adventures, we’ve turned the wilderness into both a
+                    playground and a classroom. More than 200 volunteers have stepped up to shape the next generation.
+                    Together, we’ve planted over 300 trees, healing not just the Earth, but the hearts and hopes of our
+                    youth—one seed at a time.”
                   </p>
                 </div>
               </div>
@@ -295,28 +236,30 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
     <!-- Event 1 -->
     <div class="row align-items-center mb-4">
       <div class="col-md-4">
-      <img src="<?= $basePath ?>assets/img/bg/image.jpeg" alt="arrow" />
+        <img src="<?= $basePath ?>assets/img/bg/image.jpeg" alt="arrow" />
       </div>
       <div class="col-md-8">
         <h3 class="fw-bold"> The Orange Shirt Day</h3>
         <p class="text-muted mb-1">Sep 27, 2025</p>
-    <p>
-      Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head Interpretative Trail, Beaconia, Manitoba.
-    </p>
-    <p>
-      <strong>Meet-up Location:</strong> The Legislative Building<br>
-      <strong>Departure:</strong> 10:30 AM<br>
-      <strong>Return:</strong> 5:30 PM<br>
-      <strong>Note:</strong> Food and transport will be provided.
-    </p>
+        <p>
+          Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes
+          a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head
+          Interpretative Trail, Beaconia, Manitoba.
+        </p>
+        <p>
+          <strong>Meet-up Location:</strong> The Legislative Building<br>
+          <strong>Departure:</strong> 10:30 AM<br>
+          <strong>Return:</strong> 5:30 PM<br>
+          <strong>Note:</strong> Food and transport will be provided.
+        </p>
       </div>
     </div>
 
     <!-- Event 2 -->
-    
+
 
     <!-- Event 3 -->
-    
+
   </div>
 </section>
 <!-- ====== Events Section End ====== -->
@@ -506,12 +449,9 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
 
 <!-- sign up newsletter -->
 
-<div
-  class="space-extra2-top space-extra2-bottom"
-  >
+<div class="space-extra2-top space-extra2-bottom">
   <div class="container">
-    <div
-      class="row flex-row-reverse justify-content-center align-items-center">
+    <div class="row flex-row-reverse justify-content-center align-items-center">
       <div class="col-lg-6">
         <!-- <div class="video-box1">
               <a
@@ -521,44 +461,40 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
               ></a>
             </div> -->
       </div>
-      <div class="col-lg-6">
-        <div>
-          <form
-            action="https://html.themeholy.com/tourm/demo/mail.php"
-            method="POST"
-            class="contact-form style2 ajax-contact">
-            <h3 class="sec-title mb-30 text-capitalize">Register with us</h3>
-            <div class="row">
-              <div class="col-12 form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="name"
-                  id="name3"
-                  placeholder="First Name" />
-                <img src="<?= $basePath ?>assets/img/icon/user.svg" alt="user" />
 
+      <div class="row">
+        <div class="col-lg-4">
+
+          <img src="<?= $basePath ?>assets/img/bg/desertsafari.jpeg" alt="arrow" />
+
+        </div>
+
+        <div class="col-lg-8">
+          <div>
+          <form action="<?= \yii\helpers\Url::to(['site/contact']) ?>" method="POST" class="contact-form style2 ajax-contact">
+
+          <input type="hidden" name="<?= Yii::$app->request->csrfParam ?>" value="<?= Yii::$app->request->csrfToken ?>" />
+
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Full Name" required />
+                </div>
+                <div class="col-12 form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-btn col-12 mt-24">
+                  <button type="submit" class="th-btn style3">Sign Up</button>
+                </div>
               </div>
-              <div class="col-12 form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email3"
-                  id="email3"
-                  placeholder="Your Mail" />
-                <img src="<?= $basePath ?>assets/img/icon/mail.svg" alt="email" />
-              </div>
-             
-            
-              <div class="form-btn col-12 mt-24">
-                <button type="submit" class="th-btn style3">
-                  Sign Up
-                  <img src="<?= $basePath ?>assets/img/icon/plane.svg" alt="plane" />
-                </button>
-              </div>
-            </div>
-            <p class="form-messages mb-0 mt-3"></p>
-          </form>
+            </form>
+            <p class="mt-3">
+              Register using Google Forms for a more seamless experience!
+              <a href="https://forms.gle/CkgHHEJLVHVj6RMM9" target="_blank"
+                style="color: #your-theme-color; text-decoration: underline;">
+                Click here to register via Google Forms
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
