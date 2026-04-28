@@ -98,15 +98,15 @@ $config = [
         // ],
         // 
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
+            'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',
             'useFileTransport' => false,
             'transport' => [
-                'class' => 'Swift_SmtpTransport',
+                'scheme' => 'smtp',
                 'host' => 'smtp.gmail.com',
                 'username' => 'mercymutinda04@gmail.com',
                 'password' => 'vjff eixj rydk goez',
-                'port' => '587',
+                'port' => 587,
                 'encryption' => 'tls',
             ],
         ],
