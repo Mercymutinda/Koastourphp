@@ -62,7 +62,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
+      <!-- <div class="swiper-slide">
         <div class="hero-inner">
           <div class="th-hero-bg" data-bg-src="<?= $basePath ?>assets/img/bg/image.jpg"></div>
           <div class="container">
@@ -80,7 +80,7 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="th-swiper-custom">
       <button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev">
@@ -235,23 +235,30 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
 
     <!-- Event 1 -->
     <div class="row align-items-center mb-4">
-      <div class="col-md-4">
-        <img src="<?= $basePath ?>assets/img/bg/image.jpeg" alt="arrow" />
+      <div class="col-lg-4">
+        <img src="<?= $basePath ?>assets/img/bg/desertsafari.jpeg" alt="arrow" />
       </div>
       <div class="col-md-8">
-        <h3 class="fw-bold"> The Orange Shirt Day</h3>
-        <p class="text-muted mb-1">Sep 27, 2025</p>
+        <h3 class="fw-bold"> The Spirit of Adventure</h3>
+        <p class="text-muted mb-1">June 06, 2026</p>
         <p>
-          Join us in commemorating The Orange Shirt Day with a meaningful and enriching experience. This event includes
-          a guided walk through the trail, a history lesson, and a dance on September 27th, 2025, at the Broken Head
-          Interpretative Trail, Beaconia, Manitoba.
+        Join us for a hike through the Spirit Sands trail in Kiche Manitou Provincial Park.
+        Walk through Manitoba's desert, with real sand dunes and see the famous Devil's punch bowl and its magnificent turquoise color!
+
         </p>
-        <p>
+        <p class="mt-3">
+              Register using Google Forms for a more seamless experience!
+              <a href="https://forms.gle/CkgHHEJLVHVj6RMM9" target="_blank"
+                style="color: #your-theme-color; text-decoration: underline;">
+                Click here to register via Google Forms
+              </a>
+            </p>
+        <!-- <p>
           <strong>Meet-up Location:</strong> The Legislative Building<br>
           <strong>Departure:</strong> 10:30 AM<br>
           <strong>Return:</strong> 5:30 PM<br>
           <strong>Note:</strong> Food and transport will be provided.
-        </p>
+        </p> -->
       </div>
     </div>
 
@@ -453,19 +460,13 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
   <div class="container">
     <div class="row flex-row-reverse justify-content-center align-items-center">
       <div class="col-lg-6">
-        <!-- <div class="video-box1">
-              <a
-                href="https://www.youtube.com/watch?v=cQfIUPw72Dk"
-                class="play-btn style2 popup-video"
-                ><i class="fa-sharp fa-solid fa-play"></i
-              ></a>
-            </div> -->
+     
       </div>
 
       <div class="row">
         <div class="col-lg-4">
 
-          <img src="<?= $basePath ?>assets/img/bg/desertsafari.jpeg" alt="arrow" />
+          <img src="<?= $basePath ?>assets/img/bg/n.jpg" alt="image" />
 
         </div>
 
@@ -487,13 +488,13 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                 </div>
               </div>
             </form>
-            <p class="mt-3">
+            <!-- <p class="mt-3">
               Register using Google Forms for a more seamless experience!
               <a href="https://forms.gle/CkgHHEJLVHVj6RMM9" target="_blank"
                 style="color: #your-theme-color; text-decoration: underline;">
                 Click here to register via Google Forms
               </a>
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
