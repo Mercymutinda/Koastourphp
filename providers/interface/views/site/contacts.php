@@ -57,7 +57,7 @@ use app\providers\components\widgets\site\BreadcrumbWidget;
               <a href="mailto:info@kifaruoutdoors.ca">info@kifaruoutdoors.ca</a>
             </p>
             <p class="about-contact-details-text">
-              <a href="mailto:kifaruoutdooradventures@hotmail.com">kifaruoutdooradventures@hotmail.com</a>
+              <a href="mailto:kifaruoutdooradventuressociety@gmail.com">kifaruoutdooradventures@hotmail.com</a>
             </p>
           </div>
         </div>
