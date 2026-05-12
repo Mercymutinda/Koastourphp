@@ -42,8 +42,8 @@ class ConfigWrapper
             'pageSize' => [10 => 10, 25 => 25, 50 => 50, 100 => 100],
             'pageSizeLimit' => 100,
             'defaultPageSize' => 25,
-            'adminEmail' => 'kifaruoutdooradventuressociety@gmail.com',
-            'senderEmail' => 'mercymutinda04@gmail.com',
+            'adminEmail' => 'info@kifaruoutdoors.ca',
+            'senderEmail' => 'Kifaruoutdooradventuressociety@gmail.com',
             'senderName' => 'KIFARU ADVENTURES',
             'supportEmail' => 'support@example.com',
 

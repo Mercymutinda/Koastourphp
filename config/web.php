@@ -104,8 +104,8 @@ $config = [
             'transport' => [
                 'scheme' => 'smtp',
                 'host' => 'smtp.gmail.com',
-                'username' => 'mercymutinda04@gmail.com',
-                'password' => 'vjff eixj rydk goez',
+                'username' => 'Kifaruoutdooradventuressociety@gmail.com',
+                'password' => 'yrui qzdq qzjy rpuw',
                 'port' => 587,
                 'encryption' => 'tls',
             ],
