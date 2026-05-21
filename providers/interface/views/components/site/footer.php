@@ -77,8 +77,8 @@ $basePath = \Yii::$app->request->baseUrl . '/providers/interface/assets/site/';
                     <a href="mailto:info@kifaruoutdoors.ca" class="info-box_link">info@kifaruoutdoors.ca</a>
                   </p>
                   <p>
-                    <a href="kifaruoutdooradventures@hotmail.com"
-                      class="info-box_link">kifaruoutdooradventures@hotmail.com</a>
+                    <a href="kifaruoutdooradventuressociety@gmail.com"
+                      class="info-box_link">kifaruoutdooradventuressociety@gmail.com</a>
                   </p>
                 </div>
               </div>
