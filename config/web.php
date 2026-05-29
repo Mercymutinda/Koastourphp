@@ -81,22 +81,19 @@ $config = [
             'errorAction' => 'site/error',
         ],
 
-        // 'mailer' => [
-        //     'class' => 'yii\swiftmailer\Mailer',
-        //     'viewPath' => '@app/mail',
-        //     'useFileTransport' => false,
-        //     'transport' => [
-        //               'class' => 'Swift_SmtpTransport',
-        //               'host' => '
-        // 
-        // .gmail.com',
-        //               'username' => 'mercymutinda04@gmail.com',
-        //               'password' => "vjff eixj rydk goez",
-        //               'port' => '587',
-        //               'encryption' => 'tls',
-        //           ],
-        // ],
-        // 
+    //   'mailer' => [
+    //         'class' => 'yii\swiftmailer\Mailer',
+    //         'viewPath' => '@app/mail',
+    //         'useFileTransport' => false,
+    //         'transport' => [
+    //                   'class' => 'Swift_SmtpTransport',
+    //                   'host' => 'smtp.gmail.com', // <--- FIXED
+    //                   'username' => 'mercymutinda04@gmail.com',
+    //                   'password' => "vjff eixj rydk goez",
+    //                   'port' => '587',
+    //                   'encryption' => 'tls',
+    //               ],
+    //     ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',

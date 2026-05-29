@@ -66,25 +66,34 @@ class SiteController extends \helpers\WebController
 
     public function actionContact()
     {
-        // Use the model from 'auth' because 'dashboard' is disabled in wrapper.php
-        $model = new \auth\models\contactForm();
-
+        $model = new \auth\models\contactForm(); // Ensure capital 'C'
+    
         if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
-
-            // Manual mapping to handle different names in index.php vs contacts.php
-            $model->name = $post['name'] ?? 'Web User';
-            $model->email = $post['email'] ?? $post['email3'] ?? null;
-            $model->subject = $post['subject'] ?? 'Website Inquiry';
-            $model->body = $post['message'] ?? 'User requested registration from the home page.';
-
-            // Call contact() which uses the params from wrapper.php
-            if ($model->email && $model->contact(Yii::$app->params['adminEmail'])) {
-                return "Success! Your message has been sent.";
+            
+            $model->name = $post['name'] ?? '';
+            $model->email = $post['email'] ?? '';
+            $model->phone = $post['phone'] ?? null;
+            $model->eventSelection = $post['eventSelection'] ?? [];
+            $model->subject = $post['subject'] ?? 'New Registration: HEALTHY HEARTS AND MIND';
+            $model->body = $post['message'] ?? 'Registration submission';
+    
+            if ($model->contact(Yii::$app->params['adminEmail'])) {
+                // If submitted via AJAX (background), return JSON
+                if (Yii::$app->request->isAjax) {
+                    return $this->asJson(['success' => true, 'message' => 'Success! Your registration has been sent.']);
+                }
+                // Fallback for normal page load
+                Yii::$app->session->setFlash('success', 'Registration successful!');
+                return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+            } else {
+                if (Yii::$app->request->isAjax) {
+                    return $this->asJson(['success' => false, 'message' => 'Error: Could not send message. Please try again.']);
+                }
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+                return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
             }
-            return "Error: Could not send message. Please check your email.";
         }
-
         return $this->render('contacts');
     }
     public function actionImpact()

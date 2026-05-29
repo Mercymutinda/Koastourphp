@@ -12,52 +12,54 @@ class ContactForm extends Model
 {
     public $name;
     public $email;
+    public $phone; 
+    public $eventSelection; 
     public $subject;
     public $body;
-    public $verifyCode;
 
-
-    /**
-     * @return array the validation rules.
-     */
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
-            // email has to be a valid email address
+            // Only name and email are strictly required for BOTH forms
+            [['name', 'email'], 'required'],
             ['email', 'email'],
-            // verifyCode needs to be entered correctly
-            // ['verifyCode', 'captcha'],
+            // Phone, subject, and body are safe strings but not globally required
+            [['phone', 'subject', 'body'], 'string'],
+            // eventSelection is safe (can be an array or null)
+            ['eventSelection', 'safe'], 
         ];
     }
 
-    /**
-     * @return array customized attribute labels
-     */
-    public function attributeLabels()
-    {
-        return [
-            'verifyCode' => 'Verification Code',
-        ];
-    }
-
-    /**
-     * Sends an email to the specified email address using the information collected by this model.
-     * @param string $email the target email address
-     * @return bool whether the model passes validation
-     */
     public function contact($email)
     {
         if ($this->validate()) {
+            
+            // Determine the email body based on which form was submitted
+            if (!empty($this->eventSelection)) {
+                // It's an Event Registration
+                $messageBody = "New Event Registration Details:\n\n";
+                $messageBody .= "Name: {$this->name}\n";
+                $messageBody .= "Email: {$this->email}\n";
+                $messageBody .= "Phone: {$this->phone}\n";
+                $messageBody .= "Selected Events: " . implode(', ', (array)$this->eventSelection);
+            } else {
+                // It's a standard Contact Us submission
+                $messageBody = "New Message from Website Contact Form:\n\n";
+                $messageBody .= "Name: {$this->name}\n";
+                $messageBody .= "Email: {$this->email}\n";
+                $messageBody .= "Subject: {$this->subject}\n\n";
+                $messageBody .= "Message:\n{$this->body}";
+            }
+
+            // Send the email
             Yii::$app->mailer->compose()
-                ->setTo($email)
+                ->setTo($email) 
                 ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                 ->setReplyTo([$this->email => $this->name])
-                ->setSubject($this->subject)
-                ->setTextBody($this->body)
+                ->setSubject($this->subject ? $this->subject : 'Website Inquiry')
+                ->setTextBody($messageBody)
                 ->send();
-
+                
             return true;
         }
         return false;
